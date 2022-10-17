@@ -5,38 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>anonymoustafa blog</title>
     <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/dropdown.css">
+    <link rel="stylesheet" href="./style/topNavigationBar/dropdown.css">
+    <link rel="stylesheet" href="./style/topNavigationBar/topNavigationBar.css">
     <script src="./js/handlebars-v4.7.7.js"></script>
-    <script src="./js/jquery-3.6.1.js"></script>
-    <script src="./js/app.js"></script>
+    <script src="./js/posts.js"></script>
     <script src="./js/dropDownMenu.js"></script>
+    <script src="./js/topNav.js"></script>
 </head>
 
 <body>
-    <nav>
+    <nav id="topNavTemplate" class="topnav">
         <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/press"></a></li>
+            <li class="topNavBar"><a href="/about">About</a></li>
+            <li class="topNavBar"><a href="/about">About</a></li>
+            <li class="topNavBar"><a href="/contact" >Contact</a></li>
+            <li class="topNavBar"><a href="/press"> so</a></li>
             <li>
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                    <button onclick="myFunction()" class="dropbtn">Posts</button>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
+                        <a href="#ce">Civil & Environmental Eng</a>
+                        <a href="#wjs">Web and JavaScript</a>
+                        <a href="#ls">Linux and system development</a>
                     </div>
                 </div>
             </li>
-            <li><input type="text" placeholder="Search..."></li>
+            <li class="searchBox"><input type="text" placeholder="Search..."></li>
         </ul>
     </nav>
 
 
     <h1 id="h1-template">
-        {{template}}
+        {{h1Template}}
     </h1>
 
 
@@ -45,29 +47,7 @@
 
 
     <script>
-        document.addEventListener("DOMContentLoaded", function (event) {
-            var getTemplateAsString = document.getElementById("h1-template").textContent
-            var compiledContent = Handlebars.compile(getTemplateAsString)
-            document.getElementById("h1-template").innerHTML = compiledContent({ template: "apple" })
-        });
 
-        function myFunction() {
-                document.getElementById("myDropdown").classList.toggle("show");
-            }
-
-            // Close the dropdown if the user clicks outside of it
-            window.onclick = function (event) {
-                if (!event.target.matches('.dropbtn')) {
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    var i;
-                    for (i = 0; i < dropdowns.length; i++) {
-                        var openDropdown = dropdowns[i];
-                        if (openDropdown.classList.contains('show')) {
-                            openDropdown.classList.remove('show');
-                        }
-                    }
-                }
-            }
     </script>
 
 </body>
