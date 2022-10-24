@@ -13,43 +13,20 @@
     <script src="./js/posts.js"></script>
     <script src="./js/dropDownMenu.js"></script>
     <script src="./js/topNav.js"></script>
+    <script src="./js/footer.js"></script>
 </head>
 
 <body>
     <nav id="topNavTemplate" class="topnav">
-        <ul>
-            <li class="topNavBar"><a href="/about">About</a></li>
-            <li class="topNavBar"><a href="/about">About</a></li>
-            <li class="topNavBar"><a href="/contact" >Contact</a></li>
-            <li class="topNavBar"><a href="/press"> so</a></li>
-            <li>
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Posts</button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="#ce">Civil & Environmental Eng</a>
-                        <a href="#wjs">Web and JavaScript</a>
-                        <a href="#ls">Linux and system development</a>
-                    </div>
-                </div>
-            </li>
-            <li class="searchBox"><input type="text" placeholder="Search..."></li>
-        </ul>
+        {{{topNavTemplate}}}
     </nav>
 
-
-    <h1 id="h1-template">
+    <p id="h1-template" class="fansy">
         {{h1Template}}
-    </h1>
+    </p>
 
-
-
-
-
-
-    <script>
-
-    </script>
-
+    <footer id="footerTemplate">
+        {{{footerTemplate}}}
+    </footer>
 </body>
-
 </html>

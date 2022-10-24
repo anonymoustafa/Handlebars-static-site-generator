@@ -13,6 +13,7 @@
 }
 
 .topnav {
-    overflow: hidden;
+    overflow: visible;
     background-color: #e9e9e9;
+    padding: 1px;
 }
