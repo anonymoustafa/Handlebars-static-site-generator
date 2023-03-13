@@ -1,6 +1,6 @@
 var footer = `
 <p>Author: Mostafa Ramezani<br>
-<a href="mailto:anonymoustafa@outlook.com">anonymoustafa[at symbol]outlook.com</a></p>
+<a href="mailto:anonymoustafa@outlook.com">anonymoustafa[@]outlook.com</a></p>
 `
 
         document.addEventListener("DOMContentLoaded", function (event) {

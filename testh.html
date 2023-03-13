@@ -1,0 +1,18 @@
+<script src="./js/handlebars-v4.7.7.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    var person = {
+      name: "Mostafa",
+      lastName: "Ramezani",
+    };
+    // var name = "Mostafa";
+    // var lastName = "Ramezani";
+    var getTemplateAsString = document.getElementById("ppp").innerHTML;
+    var compiled = Handlebars.compile(getTemplateAsString);
+    document.getElementById("ppp").innerHTML = compiled({
+      Name: person.name,
+      SecondName: person.lastName,
+    });
+  });
+</script>
+<p id="ppp">{{Name}} {{SecondName}}</p>
