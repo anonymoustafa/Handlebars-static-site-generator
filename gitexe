@@ -1,3 +1,5 @@
+#!/bin/bash -
+read commit_message
 git add .
-git commit -m "This commit is autmatic"
+git commit -m "$commit_message"
 git push
