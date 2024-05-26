@@ -1,0 +1,1 @@
+/home/mostafa/Documents/local-repositories/Handlebars-static-site-generator/ssr_rust/target/debug/ssr_rust: /home/mostafa/Documents/local-repositories/Handlebars-static-site-generator/ssr_rust/src/main.rs
