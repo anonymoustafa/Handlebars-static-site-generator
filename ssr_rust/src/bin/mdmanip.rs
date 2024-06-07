@@ -1,5 +1,10 @@
+use std::io;
 use std::fs;
+use std::io::Write;
 use std::path::Path;
+use std::error::Error;
+use std::fs::File;
+use std::io::Read;
 
 fn main() {
     let root_path = "..";
@@ -25,10 +30,10 @@ fn enumerate_files<P: AsRef<Path>>(path: P, extension: &str) -> Result<(), Box<d
                         println!("{}", path.display());
                         // Perform your task on the file here
                         // For example:
-                        // let mut file = fs::File::open(path)?;
-                        // let mut contents = String::new();
-                        // file.read_to_string(&mut contents)?;
-                        // println!("File contents: {}", contents);
+                        let mut file = fs::File::open(path)?;
+                        let mut contents = String::new();
+                        file.read_to_string(&mut contents)?;
+                        println!("File contents: {}", contents);
                     }
                 }
             }
