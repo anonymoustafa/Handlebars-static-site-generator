@@ -30,10 +30,10 @@ fn enumerate_files<P: AsRef<Path>>(path: P, extension: &str) -> Result<(), Box<d
                         println!("{}", path.display());
                         // Perform your task on the file here
                         // For example:
-                        let mut file = fs::File::open(path)?;
-                        let mut contents = String::new();
-                        file.read_to_string(&mut contents)?;
-                        println!("File contents: {}", contents);
+                        // let mut file = fs::File::open(path)?;
+                        // let mut contents = String::new();
+                        // file.read_to_string(&mut contents)?;
+                        // println!("File contents: {}", contents);
                     }
                 }
             }

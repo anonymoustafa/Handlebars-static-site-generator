@@ -5,7 +5,7 @@ use std::path::Path;
 use std::error::Error;
 use std::fs::File;
 fn main() -> Result<(), Box<dyn Error>> {
-    let root_path = "..";
+    let root_path = ".";
     enumerate_files(root_path)?;
     Ok(())
 }
